@@ -1,5 +1,12 @@
-p = 90
+def calcular_intervalo(p):
+  erro_relativo_maximo = 10**(-2)
+  valor_minimo = p * (1 - erro_relativo_maximo)
+  valor_maximo = p * (1 + erro_relativo_maximo)
+  print(f'p = {p}')
+  print(f'Intervalo: [{valor_minimo:.2f}, {valor_maximo:.2f}]\n')
 
-intf = p * 0.999
-ints = round(p * 1.001, 2) #(valor, casas decimais)
-print(f'[{intf}, {ints}]')
+
+calcular_intervalo(150)
+calcular_intervalo(900)
+calcular_intervalo(1500)
+calcular_intervalo(90)
